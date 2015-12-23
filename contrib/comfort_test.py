@@ -1,4 +1,5 @@
 __author__ = 'Mikael Foo'
+#simulation wrapper for matlab
 
 import ComfortModelsClass
 
@@ -14,23 +15,23 @@ def comfpmv(self, ta, tr, vel, rh, met, clo, wme):
 
     comf = dumpmv.comfPMV(ta, tr, vel, rh, met, clo, wme)
 
-    return comf[0]
+    return comf.pop(0)
 
 def comfpmv_ppd(self, ta, tr, vel, rh, met, clo, wme):
 
     comf = dumpmv.comfPMV(ta, tr, vel, rh, met, clo, wme)
-    return comf[1]
+    return comf.pop(1)
 
 
 def comfPMVElevatedAirspeed_pmv(self, ta, tr, vel, rh, met, clo, wme):
 
     comf = dumpmv.comfPMVElevatedAirspeed(ta, tr, vel, rh, met, clo, wme)
-    return comf[0]
+    return comf.pop(0)
 
 def comfPMVElevatedAirspeed_ppd(self, ta, tr, vel, rh, met, clo, wme):
 
     comf = dumpmv.comfPMVElevatedAirspeed(ta, tr, vel, rh, met, clo, wme)
-    return comf[1]
+    return comf.pop(1)
 
 
 
