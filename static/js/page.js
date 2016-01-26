@@ -735,7 +735,7 @@ $('#specPressure').click(function() {
 $('#globeTemp').click(function() {
     var container = $('#globedialog');
     $.ajax({
-        url: util.STATIC_URL + 'html/globetemp.html',
+        url: util.STATIC_URL + '/html/globetemp.html',
         success: function(data) {
             $('#globedialog').html(data);
             if (!isCelsius) {
